@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://house-hunter1.onrender.com/users')
             .then(res => res.json())
             .then(data => {
                 const lastUser = data[data.length - 1];
@@ -55,7 +55,7 @@ const Navbar = () => {
 
             <div class="navbar shadow-lg   bg-black  py-3 text-white justify-between">
                 <div class="navbar-start">
-                    <Link to="/home" class="normal-case text-xl flex  " > <img className='w-16 mr-2' src="" alt="" />House Hunter {user} </Link>
+                    <Link to="/home" class="normal-case text-xl flex  " > <img className='w-16 mr-2' src="" alt="" />House Hunter  </Link>
                 </div>
 
 

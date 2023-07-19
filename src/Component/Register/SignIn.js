@@ -12,7 +12,7 @@ const SignIn = () => {
     const [singleUser, setSingleUserData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://house-hunter1.onrender.com/users')
             .then(res => res.json())
             .then(data => {
                 const singleUserData = data.map(user => ({
@@ -44,58 +44,12 @@ const SignIn = () => {
           setCheckUser(checkUserObj);
           console.log("checkUser", checkUserObj);
           
-        //   fetch('http://localhost:5000/loggedUser', {
-        //     method: 'POST',
-        //     headers: {
-        //       'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(checkUserObj) // Send the object as JSON
-        //   })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //       if (data.insertedId) {
-        //         console.log("form submitted successfully");
-        //       }
-        //     })
-        //     .catch(error => {
-        //       console.error("Error:", error);
-        //     });
-        }
+      
         
         navigate('/dashboard');
       };
       
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     setSignInData({
-    //         email: '',
-    //         password: '',
-    //     });
-    //     console.log("sign in data",signInData)
-    //     if (singleUser[0]?.email === signInData?.email) {
-    //         setCheckUser(signInData?.email);
-    //         console.log("checkUser", signInData?.email)
-
-    //     }
-        
-
-        
-    //     fetch('http://localhost:5000/newLoggedUser', {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(checkUser)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.insertedId) {
-    //                 console.log("data submitted successfully")
-    //             }
-    //         })
-
-    //     navigate("/dashboard")
-    // }
+    }
 
     return (
 

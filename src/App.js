@@ -3,6 +3,8 @@ import Home from "./Component/Home/Home";
 import SignUp from './Component/Register/SignUp';
 import SignIn from './Component/Register/SignIn';
 import Dashboard from './Component/Dashboard/Dashboard';
+import HouseOwner from './Component/Dashboard/HouseOwner';
+import HouseRenter from './Component/Dashboard/HouseRenter';
 
 
 function App() {
@@ -27,28 +29,10 @@ function App() {
     {
       path:"dashboard" , 
       element: <Dashboard></Dashboard>,
-      // children:[
-    //     /* Profile router for all user, admin, hotel owner etc */
-    //     {path:"/dashboard" , element: <Profile></Profile>},
-    //     {path:"/dashboard/profile" , element: <Profile></Profile>},
-
-
-    //     /* here routes for Admin */
-    //     {path:"/dashboard/AllUser" , element: <AllUser></AllUser>},
-    //     {path:"/dashboard/AllHotel" , element: <AllHotel></AllHotel>},
-    //     {path:"/dashboard/AllHotelBookingDetails" , element: <AllHotelBookingDetails></AllHotelBookingDetails>},
-    //     {path:"/dashboard/AllReview" , element: <AllReview></AllReview>},
-
-
-    //     /* here routes for Hotel owner */
-    //     {path:"/dashboard/addHotel" , element: <AddHotel></AddHotel>},
-
-
-    //     /* here routes for normal user or tourist */
-    //     {path:"/dashboard/BookedHotel" , element: <BookedHotel></BookedHotel>},
-    //     {path:"/dashboard/specialTours" , element: <SpecialTours></SpecialTours>},
-
-    //   ]
+      children:[
+        {path:"/dashboard/houseOwner" , element: <HouseOwner></HouseOwner>},
+        {path:"/dashboard/houseRenter" , element: <HouseRenter></HouseRenter>},
+      ]
     },
   ])
 

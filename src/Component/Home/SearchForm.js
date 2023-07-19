@@ -12,7 +12,7 @@ const SearchForm = () => {
 
   console.log(records)
   useEffect(() => {
-    fetch('http://localhost:5000/houses')
+    fetch('https://house-hunter1.onrender.com/houses')
       .then(res => res.json())
       .then(data => {
         setAllHouses(data);
